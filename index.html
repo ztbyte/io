@@ -150,7 +150,7 @@
       align-items:center;
     }
     
-    .hero-card,.info-card,.card,.testimonial,.gallery-item,.contact-card{
+    .hero-card,.info-card,.card,.testimonial,.gallery-item,.contact-card,.product-category{
       background:var(--card);
       border:1px solid rgba(255,255,255,.08);
       border-radius:var(--radius);
@@ -396,6 +396,195 @@
       font-weight:500;
     }
     
+    /* PRODUCTS SECTION */
+    .product-showcase {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+    
+    .product-category {
+      padding: 32px;
+      border-radius: var(--radius);
+    }
+    
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    
+    .brand-logo-pfsense,
+    .brand-logo-mikrotik {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .brand-logo-pfsense span,
+    .brand-logo-mikrotik span {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+    
+    .brand-logo-pfsense small {
+      color: #f7981c;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .brand-logo-mikrotik small {
+      color: var(--brand2);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .hardware-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    
+    .hardware-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .hardware-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.15);
+      box-shadow: 0 20px 40px rgba(0,0,0,.3);
+    }
+    
+    .hardware-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .hardware-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    
+    .hardware-card h4 {
+      font-size: 18px;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+    
+    .specs {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px 0;
+      flex-grow: 1;
+    }
+    
+    .specs li {
+      padding: 5px 0;
+      color: var(--muted);
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,.04);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .specs li:before {
+      content: "✓";
+      color: var(--brand2);
+      font-weight: bold;
+      font-size: 11px;
+    }
+    
+    .buy-link {
+      color: var(--brand2);
+      font-weight: 600;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.3s;
+    }
+    
+    .hardware-card:hover .buy-link {
+      gap: 10px;
+      color: #fff;
+    }
+    
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+    
+    .product-note {
+      margin-top: 40px;
+      background: rgba(21,117,187,.15);
+      border: 1px solid rgba(77,154,208,.3);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    
+    .note-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    
+    .product-note strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 4px;
+    }
+    
+    .product-note p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    .product-note a {
+      color: var(--brand2);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
+    }
+    
+    .product-note a:hover {
+      border-bottom-color: var(--brand2);
+    }
+    
     /* Testimonials */
     .testimonials{
       display:grid;
@@ -479,7 +668,6 @@
     
     input::placeholder,textarea::placeholder{color:#97abc9}
     
-    /* Fix select dropdown for dark mode */
     select{
       cursor:pointer;
       appearance:none;
@@ -632,6 +820,7 @@
       .hero{text-align:center;padding-top:60px}
       .hero p{margin:0 auto}
       .mini-stats{grid-template-columns:repeat(3,1fr)}
+      .category-header{flex-direction:column;align-items:flex-start}
     }
     
     @media (max-width:640px){
@@ -644,13 +833,14 @@
       .telegram-box{flex-direction:column;align-items:flex-start;gap:12px}
       .float-btn{width:50px;height:50px;font-size:20px}
       .float-btn::after{display:none}
+      .hardware-grid{grid-template-columns:1fr}
+      .product-category{padding:24px}
     }
     
-    /* Reduced Motion */
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
       .hero-logo{animation:none}
-      .card:hover,.gallery-item:hover,.testimonial:hover,.info-card:hover{transform:none}
+      .card:hover,.gallery-item:hover,.testimonial:hover,.info-card:hover,.hardware-card:hover{transform:none}
     }
   </style>
 </head>
@@ -667,6 +857,7 @@
       <nav class="nav-links" aria-label="Main Navigation">
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
+        <a href="#products">Products</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#quotation">Quotation</a>
         <a href="#support">Support</a>
@@ -793,6 +984,134 @@
     </div>
   </section>
 
+  <!-- PRODUCTS SECTION -->
+  <section class="section" id="products">
+    <div class="container">
+      <h2>Official Products & Hardware</h2>
+      <p class="section-sub">We recommend and support official hardware appliances. Click to view specifications and purchase from official distributors.</p>
+      
+      <div class="product-showcase">
+        <!-- pfSense Products -->
+        <div class="product-category">
+          <div class="category-header">
+            <div class="brand-logo-pfsense">
+              <span>pfSense</span>
+              <small>by Netgate</small>
+            </div>
+            <a href="https://www.netgate.com/pfsense-plus-software/how-to-buy#appliances" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">View All Netgate Products →</a>
+          </div>
+          
+          <div class="hardware-grid">
+            <a href="https://www.netgate.com/products/xg-4100.html" target="_blank" rel="noopener" class="hardware-card">
+              <div class="hardware-badge">Popular</div>
+              <div class="hardware-icon">🔥</div>
+              <h4>Netgate 4100</h4>
+              <ul class="specs">
+                <li>Dual-core ARM Cortex-A57</li>
+                <li>4GB DDR4 RAM</li>
+                <li>16GB eMMC Storage</li>
+                <li>4x 2.5GbE Ports</li>
+                <li>Perfect for: SMB, 50‑100 users</li>
+              </ul>
+              <div class="buy-link">View Specs →</div>
+            </a>
+            
+            <a href="https://www.netgate.com/products/xg-6100.html" target="_blank" rel="noopener" class="hardware-card">
+              <div class="hardware-badge">Enterprise</div>
+              <div class="hardware-icon">🏢</div>
+              <h4>Netgate 6100</h4>
+              <ul class="specs">
+                <li>Quad-core Intel Atom</li>
+                <li>8GB DDR4 RAM</li>
+                <li>32GB eMMC Storage</li>
+                <li>6x 2.5GbE Ports</li>
+                <li>Perfect for: Mid‑size office, VPN hub</li>
+              </ul>
+              <div class="buy-link">View Specs →</div>
+            </a>
+            
+            <a href="https://www.netgate.com/products/xg-8200.html" target="_blank" rel="noopener" class="hardware-card">
+              <div class="hardware-badge">High‑End</div>
+              <div class="hardware-icon">🚀</div>
+              <h4>Netgate 8200</h4>
+              <ul class="specs">
+                <li>Octa-core Intel Atom C3758</li>
+                <li>16GB DDR4 ECC RAM</li>
+                <li>128GB SSD Storage</li>
+                <li>8x GbE + 2x SFP+ 10G</li>
+                <li>Perfect for: Data centre, ISP</li>
+              </ul>
+              <div class="buy-link">View Specs →</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- MikroTik Products -->
+        <div class="product-category">
+          <div class="category-header">
+            <div class="brand-logo-mikrotik">
+              <span>MikroTik</span>
+              <small>RouterBOARD</small>
+            </div>
+            <a href="https://mikrotik.com/products" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">View All MikroTik Products →</a>
+          </div>
+          
+          <div class="hardware-grid">
+            <a href="https://mikrotik.com/product/hex_s" target="_blank" rel="noopener" class="hardware-card">
+              <div class="hardware-badge">Best Value</div>
+              <div class="hardware-icon">⚡</div>
+              <h4>hEX S (RB760iGS)</h4>
+              <ul class="specs">
+                <li>Dual‑core 880 MHz MT7621A</li>
+                <li>256 MB DDR3 RAM</li>
+                <li>5× Gigabit Ethernet</li>
+                <li>1× SFP‑Cage (Fiber ready)</li>
+                <li>USB 3.0, microSD slot</li>
+              </ul>
+              <div class="buy-link">View Specs →</div>
+            </a>
+            
+            <a href="https://mikrotik.com/product/ccr2004-16g-2splus" target="_blank" rel="noopener" class="hardware-card">
+              <div class="hardware-badge">Data Centre</div>
+              <div class="hardware-icon">🖥️</div>
+              <h4>CCR2004‑16G‑2S+</h4>
+              <ul class="specs">
+                <li>Quad‑core ARM64 1.7 GHz</li>
+                <li>16 GB DDR4 RAM</li>
+                <li>16× Gigabit + 2× 10 G SFP+</li>
+                <li>Dual Power Supply</li>
+                <li>Rackmount 1U</li>
+              </ul>
+              <div class="buy-link">View Specs →</div>
+            </a>
+            
+            <a href="https://mikrotik.com/product/crs326-24g-2srm" target="_blank" rel="noopener" class="hardware-card">
+              <div class="hardware-badge">Switch</div>
+              <div class="hardware-icon">🔄</div>
+              <h4>CRS326‑24G‑2S+RM</h4>
+              <ul class="specs">
+                <li>24× Gigabit Ethernet Ports</li>
+                <li>2× 10 G SFP+ Uplink</li>
+                <li>RouterOS L5 + SwOS</li>
+                <li>Rackmount Ready</li>
+                <li>Perfect for: Office network core</li>
+              </ul>
+              <div class="buy-link">View Specs →</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="product-note">
+        <div class="note-icon">ℹ️</div>
+        <div>
+          <strong>Need consultation on hardware selection?</strong>
+          <p>We help you choose the right appliance based on your bandwidth, user count, and feature requirements. <a href="#quotation">Request a free consultation</a> or WhatsApp us for instant advice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="testimonials">
     <div class="container">
       <h2>Client Testimonials</h2>
@@ -825,7 +1144,7 @@
         
         <div class="testimonial">
           <div class="quote" aria-hidden="true">“</div>
-          <p>The support quality feels practical and hands-on. Good explanation, good technical depth, and the solution was easy for our team to maintain.</p>
+          <p>The support quality feels practical and hands‑on. Good explanation, good technical depth, and the solution was easy for our team to maintain.</p>
           <div class="person">
             <div class="avatar">KC</div>
             <div>
@@ -903,14 +1222,14 @@
         </div>
         
         <p class="small-note" style="margin-top:18px">
-          <strong>Business Hours:</strong> Mon-Fri 9:00 AM - 6:00 PM (MYT)<br>
+          <strong>Business Hours:</strong> Mon‑Fri 9:00 AM - 6:00 PM (MYT)<br>
           Emergency support available via WhatsApp/Telegram
         </p>
       </div>
 
       <div class="contact-card" id="support">
         <h2 style="text-align:left;margin-bottom:12px">Support Ticket</h2>
-        <p>Describe your technical issue and we'll respond within 24 hours. For urgent issues, use WhatsApp/Telegram.</p>
+        <p>Describe your technical issue and we'll respond within 24 hours. For urgent issues, use WhatsApp/Telegram.</p>
         
         <form id="supportForm">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
@@ -926,7 +1245,12 @@
             <option value="Critical">Critical - System Down</option>
           </select>
           
-          <textarea id="details" rows="5" placeholder="Describe your issue in detail...&#10;&#10;Include:&#10;- Error messages&#10;- Steps taken&#10;- Device/Software versions" required></textarea>
+          <textarea id="details" rows="5" placeholder="Describe your issue in detail...
+
+Include:
+- Error messages
+- Steps taken
+- Device/Software versions" required></textarea>
           
           <button class="btn btn-primary" type="submit">Send Support Ticket</button>
           
@@ -1068,7 +1392,7 @@
       const priority = document.getElementById('priority').value;
       const details = document.getElementById('details').value.trim();
       
-      const to = 'ztbyte.technology@gmail.com';
+      const to = 'support@ztbyte.com.my';
       const subject = encodeURIComponent(`[${priority}] ${issue}`);
       const body = encodeURIComponent(
         `Name: ${name}%0D%0A` +
