@@ -7,7 +7,7 @@
   <meta name="keywords" content="pfSense, MikroTik, VPN, Firewall, Network Security, ZTBYTE, Cybersecurity" />
   <meta name="author" content="Rusli" />
   <title>ZTBYTE Technology - Network Solutions</title>
-  
+
   <style>
     :root{
       --bg:#081120;
@@ -781,6 +781,41 @@
       font-size:14px;
     }
     
+    /* ----------  AUTO‑SLIDE LOGO CAROUSEL  ---------- */
+    .footer-logos{
+      margin-top:24px;
+      overflow:hidden;
+      padding:12px 0;
+      background:rgba(255,255,255,.03);
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+    
+    .footer-logos .logo-track{
+      display:flex;
+      align-items:center;
+      width:max-content;
+      animation:scrollLogos 22s linear infinite;
+    }
+    
+    .footer-logos .logo-track img{
+      height:48px;               /* ubah nilai ini untuk menukar saiz logo */
+      margin:0 24px;
+      filter:brightness(0) invert(1);
+    }
+    
+    @keyframes scrollLogos{
+      0%   { transform:translateX(0); }
+      100% { transform:translateX(-50%); }  /* gerak set pertama */
+    }
+    
+    @media (max-width:640px){
+      .footer-logos .logo-track img{
+        height:38px;
+        margin:0 16px;
+      }
+    }
+    /* ----------  END CAROUSEL  ---------- */
+    
     /* Back to Top */
     .back-to-top{
       position:fixed;
@@ -1007,10 +1042,10 @@
               <div class="hardware-icon">🔥</div>
               <h4>Netgate 4100</h4>
               <ul class="specs">
-                <li>Dual-core ARM Cortex-A57</li>
-                <li>4GB DDR4 RAM</li>
-                <li>16GB eMMC Storage</li>
-                <li>4x 2.5GbE Ports</li>
+                <li>Dual‑core ARM Cortex‑A57</li>
+                <li>4 GB DDR4 RAM</li>
+                <li>16 GB eMMC Storage</li>
+                <li>4× 2.5 GbE Ports</li>
                 <li>Perfect for: SMB, 50‑100 users</li>
               </ul>
               <div class="buy-link">View Specs →</div>
@@ -1021,10 +1056,10 @@
               <div class="hardware-icon">🏢</div>
               <h4>Netgate 6100</h4>
               <ul class="specs">
-                <li>Quad-core Intel Atom</li>
-                <li>8GB DDR4 RAM</li>
-                <li>32GB eMMC Storage</li>
-                <li>6x 2.5GbE Ports</li>
+                <li>Quad‑core Intel Atom</li>
+                <li>8 GB DDR4 RAM</li>
+                <li>32 GB eMMC Storage</li>
+                <li>6× 2.5 GbE Ports</li>
                 <li>Perfect for: Mid‑size office, VPN hub</li>
               </ul>
               <div class="buy-link">View Specs →</div>
@@ -1035,10 +1070,10 @@
               <div class="hardware-icon">🚀</div>
               <h4>Netgate 8200</h4>
               <ul class="specs">
-                <li>Octa-core Intel Atom C3758</li>
-                <li>16GB DDR4 ECC RAM</li>
-                <li>128GB SSD Storage</li>
-                <li>8x GbE + 2x SFP+ 10G</li>
+                <li>Octa‑core Intel Atom C3758</li>
+                <li>16 GB DDR4 ECC RAM</li>
+                <li>128 GB SSD Storage</li>
+                <li>8× GbE + 2× SFP+ 10G</li>
                 <li>Perfect for: Data centre, ISP</li>
               </ul>
               <div class="buy-link">View Specs →</div>
@@ -1060,7 +1095,7 @@
             <a href="https://mikrotik.com/product/hex_s" target="_blank" rel="noopener" class="hardware-card">
               <div class="hardware-badge">Best Value</div>
               <div class="hardware-icon">⚡</div>
-              <h4>hEX S (RB760iGS)</h4>
+              <h4>hEX S (RB760iGS)</h4>
               <ul class="specs">
                 <li>Dual‑core 880 MHz MT7621A</li>
                 <li>256 MB DDR3 RAM</li>
@@ -1261,7 +1296,7 @@ Include:
             <span>Ticket prepared! Opening your email client...</span>
           </div>
           
-          <p class="small-note">This will open your default email client. If that doesn't work, email us directly at <a href="mailto:ztbyte.technology@gmail.com" style="color:var(--brand2)">ztbyte.technology@gmail.com</a></p>
+          <p class="small-note">This will open your default email client. If that doesn't work, email us directly at <a href="mailto:ztbyte.technology@gmail.com" style="color:var(--brand2)">ztbyte.technology@gmail.com"</a></p>
         </form>
       </div>
     </div>
@@ -1278,6 +1313,24 @@ Include:
     <div class="container">
       <p>© 2026 ZTBYTE Technology • Built by Rusli • Your Network Solutions</p>
       <p style="margin-top:8px;font-size:13px;opacity:0.8">Serving Malaysia & Singapore</p>
+
+      <!-- ==== AUTO‑SLIDE LOGO CAROUSEL ==== -->
+      <div class="footer-logos">
+        <div class="logo-track">
+          <!-- 1️⃣ set pertama -->
+          <img src="img/pfsense.svg"      alt="pfSense"      loading="lazy">
+          <img src="img/mikrotik.svg"     alt="MikroTik"    loading="lazy">
+          <img src="img/ubiquiti.svg"    alt="Ubiquiti"    loading="lazy">
+          <img src="img/wireguard.svg"    alt="WireGuard"   loading="lazy">
+          <!-- 2️⃣ set kedua (duplikasi – supaya gelombang tak putus) -->
+          <img src="img/pfsense.svg"      alt="pfSense"      loading="lazy">
+          <img src="img/mikrotik.svg"     alt="MikroTik"    loading="lazy">
+          <img src="img/ubiquiti.svg"    alt="Ubiquiti"    loading="lazy">
+          <img src="img/wireguard.svg"    alt="WireGuard"   loading="lazy">
+        </div>
+      </div>
+      <!-- ==== END CAROUSEL ==== -->
+
     </div>
   </footer>
 
@@ -1303,28 +1356,23 @@ Include:
     
     function draw(){
       if(!isVisible) return;
-      
       ctx.clearRect(0,0,w,h);
       for(let i=0;i<particles.length;i++){
         const p = particles[i];
         p.x += p.vx; 
         p.y += p.vy;
-        
         if(p.x < 0 || p.x > w) p.vx *= -1;
         if(p.y < 0 || p.y > h) p.vy *= -1;
-        
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fillStyle = 'rgba(120,190,255,.75)';
         ctx.fill();
-        
         // Connect nearby particles
         for(let j=i+1;j<particles.length;j++){
           const q = particles[j];
           const dx = p.x - q.x;
           const dy = p.y - q.y;
           const d = Math.sqrt(dx*dx + dy*dy);
-          
           if(d < 120){
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
@@ -1337,12 +1385,10 @@ Include:
       animationId = requestAnimationFrame(draw);
     }
     
-    // Pause animation when not visible (performance)
     const observer = new IntersectionObserver((entries) => {
       isVisible = entries[0].isIntersecting;
       if(isVisible && !animationId) draw();
     });
-    
     observer.observe(canvas);
     
     window.addEventListener('resize', () => {
@@ -1375,7 +1421,6 @@ Include:
         `Details: ${details || 'None provided'}`
       );
       
-      // Show success message
       document.getElementById('qSuccess').classList.add('show');
       setTimeout(() => {
         window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
@@ -1413,7 +1458,6 @@ Include:
     const navLinks = document.querySelectorAll('.nav-links a');
     
     function onScroll(){
-      // Back to top button
       const backToTop = document.getElementById('backToTop');
       if(window.scrollY > 500){
         backToTop.classList.add('visible');
@@ -1421,16 +1465,13 @@ Include:
         backToTop.classList.remove('visible');
       }
       
-      // Active nav link
       let current = '';
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if(scrollY >= (sectionTop - 100)){
           current = section.getAttribute('id');
         }
       });
-      
       navLinks.forEach(link => {
         link.classList.remove('active');
         if(link.getAttribute('href') === `#${current}`){
@@ -1438,7 +1479,6 @@ Include:
         }
       });
     }
-    
     window.addEventListener('scroll', onScroll);
     
     // Back to top functionality
@@ -1449,7 +1489,6 @@ Include:
     // Hide/show navbar on scroll direction
     let lastScroll = 0;
     const navbar = document.getElementById('navbar');
-    
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
       if(currentScroll > lastScroll && currentScroll > 100){
