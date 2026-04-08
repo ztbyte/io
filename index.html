@@ -9,7 +9,6 @@
       --bg:#081120;
       --bg2:#0f172a;
       --card:#111c31cc;
-      --line:#1e3359;
       --text:#e5eefc;
       --muted:#a8b7d1;
       --brand:#1575bb;
@@ -20,13 +19,11 @@
       --radius:22px;
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family:Arial,Helvetica,sans-serif;
       color:var(--text);
       background:linear-gradient(180deg,var(--bg),var(--bg2));
-      line-height:1.6;
       overflow-x:hidden;
     }
     #particles{
@@ -38,492 +35,89 @@
       opacity:.55;
     }
     .container{max-width:1200px;margin:auto;padding:0 20px}
-    .section{padding:82px 0}
-    h1,h2,h3,p{margin-top:0}
-    h2{font-size:38px;text-align:center;margin-bottom:14px}
-    .section-sub{color:var(--muted);text-align:center;max-width:760px;margin:0 auto 34px}
     .topbar{
       position:sticky;top:0;z-index:20;
       backdrop-filter:blur(14px);
       background:rgba(6,12,24,.65);
       border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
-    .brand-mini{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:1px}
-    .brand-mini img{width:42px;height:42px;object-fit:contain;border-radius:10px;background:rgba(255,255,255,.92);padding:4px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
-    .nav-links{display:flex;gap:18px;flex-wrap:wrap}
-    .nav-links a{color:var(--text);text-decoration:none;font-size:14px;opacity:.9}
-    .nav-links a:hover{color:#fff}
-    .hero{padding:90px 0 68px;position:relative}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
-    .hero-card,.info-card,.card,.testimonial,.gallery-item,.contact-card{
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 0;
+    }
+    .brand-mini{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+    }
+    .brand-mini img{
+      width:42px;
+      height:42px;
+      object-fit:contain;
+      border-radius:10px;
+      background:rgba(255,255,255,.92);
+      padding:4px;
+    }
+    .nav-links{
+      display:flex;
+      gap:18px;
+    }
+    .nav-links a{
+      color:#fff;
+      text-decoration:none;
+    }
+    .hero{
+      padding:90px 0;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:30px;
+      align-items:center;
+    }
+    .hero-card{
       background:var(--card);
-      border:1px solid rgba(255,255,255,.08);
       border-radius:var(--radius);
+      padding:38px;
       box-shadow:var(--shadow);
     }
-    .hero-card{padding:38px}
-    .eyebrow{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(21,117,187,.15);border:1px solid rgba(77,154,208,.35);color:#c9e5ff;font-size:13px;margin-bottom:16px}
-    .hero h1{font-size:56px;line-height:1.05;margin-bottom:16px}
-    .hero p{font-size:18px;color:var(--muted);max-width:720px}
-    .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:12px;text-decoration:none;border:none;cursor:pointer;font-size:16px;font-weight:700;transition:.25s transform,.25s opacity,.25s background}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}
-    .btn-secondary{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.1)}
-    .hero-logo-wrap{padding:34px;display:flex;align-items:center;justify-content:center;min-height:420px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.03));backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.08)}
-    .hero-logo{background:radial-gradient(circle at top, rgba(255,255,255,.96), rgba(255,255,255,.88));padding:18px;border-radius:24px;
-      width:min(100%,540px);
-      height:auto;
-      animation:fadeFloat 2s ease-out both, softPulse 6s ease-in-out infinite 2s;
-      filter:drop-shadow(0 16px 40px rgba(0,0,0,.35));
+    .hero h1{
+      font-size:56px;
+      line-height:1.05;
     }
-    @keyframes fadeFloat{
-      from{opacity:0;transform:translateY(18px) scale(.96)}
-      to{opacity:1;transform:translateY(0) scale(1)}
+    .hero p{
+      color:var(--muted);
+      font-size:20px;
     }
-    @keyframes softPulse{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-6px)}
-    }
-    .mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
-    .info-card{padding:20px;text-align:center}
-    .info-card strong{display:block;font-size:24px;color:#fff}
-    .info-card span{font-size:13px;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-    .card{padding:24px}
-    .icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:16px;background:linear-gradient(135deg,rgba(21,117,187,.24),rgba(247,152,28,.2));border:1px solid rgba(255,255,255,.09)}
-    .card p,.testimonial p,.contact-card p{color:var(--muted)}
-    .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
-    .gallery-item{overflow:hidden}
-    .gallery-shot{height:220px;background:linear-gradient(135deg,#0d1b32,#163056);border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#d9e9ff;font-size:20px;font-weight:700;letter-spacing:.5px}
-    .gallery-shot img{width:100%;height:100%;object-fit:cover;display:block}
-    .gallery-body{padding:20px}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-    .tag{padding:6px 10px;border-radius:999px;font-size:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:#d6e6ff}
-    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-    .testimonial{padding:24px;position:relative}
-    .quote{font-size:40px;line-height:1;color:var(--accent);position:absolute;top:14px;right:18px;opacity:.45}
-    .person{display:flex;gap:14px;align-items:center;margin-top:18px}
-    .avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--brand2),var(--accent));display:grid;place-items:center;font-weight:700;color:#fff}
-    .person small{display:block;color:var(--muted)}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
-    .contact-card{padding:26px}
-    form{display:grid;gap:14px}
-    input,textarea{
-      width:100%;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#fff;font-size:15px
-    }
-    input::placeholder,textarea::placeholder{color:#97abc9}
-    .small-note{font-size:13px;color:var(--muted)}
-    .telegram-box{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);margin-top:18px}
-    .telegram-box strong{display:block}
-    .floating-wrap{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:25}
-    .float-btn{
-      width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;font-size:26px;box-shadow:0 12px 30px rgba(0,0,0,.28)
-    }
-    .wa-float{background:var(--success)}
-    .tg-float{background:#229ED9}
-    footer{text-align:center;padding:28px 20px;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
-    @media (max-width:960px){
-      .hero-grid,.contact-grid{grid-template-columns:1fr}
-      .hero h1{font-size:42px}
-      .hero-logo-wrap{min-height:auto}
-    }
-    @media (max-width:640px){
-      .nav{flex-direction:column;align-items:flex-start}
-      .mini-stats{grid-template-columns:1fr}
-      h2{font-size:30px}
-      .hero{padding-top:60px}
-      .hero h1{font-size:34px}
-      .hero-card{padding:24px}
-    }
-  </style>
-</head>
-<body>
-  <canvas id="particles"></canvas>
-
-  <div class="topbar">
-    <div class="container nav">
-      <div class="brand-mini">
-        <img src="logo.png" alt="ZTBYTE logo">
-        <span>ZTBYTE TECHNOLOGY</span>
-      </div>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#support">Support</a>
-        <a href="#connect">LinkedIn</a>
-      </div>
-    </div>
-  </div>
-
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-card">
-        <span class="eyebrow">YOUR NETWORK SOLUTIONS</span>
-        <h1>Network, security and support that feel enterprise-ready.</h1>
-        <p>ZTBYTE Technology helps businesses strengthen pfSense, MikroTik, VPN, firewall, routing, remote access and cybersecurity operations with practical support and faster troubleshooting.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#support">Open Support Ticket</a>
-          <a class="btn btn-secondary" href="#projects">View Project Gallery</a>
-        </div>
-        <div class="mini-stats">
-          <div class="info-card"><strong>pfSense</strong><span>Firewall, VPN, IDS/IPS</span></div>
-          <div class="info-card"><strong>MikroTik</strong><span>Routing, VLAN, WireGuard</span></div>
-          <div class="info-card"><strong>Support</strong><span>Remote troubleshooting</span></div>
-        </div>
-      </div>
-      <div class="hero-logo-wrap hero-card">
-        <img class="hero-logo" src="logo.png" alt="ZTBYTE Technology Logo">
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <p class="section-sub">Specialized infrastructure and cybersecurity support for SMB, office, CCTV and branch network environments.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="icon">🛡️</div>
-          <h3>pfSense Firewall</h3>
-          <p>Firewall policy hardening, VPN setup, HA deployment, pfBlockerNG tuning, NAT, site-to-site connectivity and log review.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🌐</div>
-          <h3>MikroTik Routing</h3>
-          <p>Routing design, inter-VLAN rules, CCTV access, failover, QoS, bandwidth control and WireGuard remote networking.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🔐</div>
-          <h3>Cybersecurity</h3>
-          <p>SOP hardening, incident response preparation, access review, segmentation and customer information protection guidance.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🤖</div>
-          <h3>Automation & AI Tools</h3>
-          <p>Custom scripts, Python utilities, Ollama support workflows and automation for network diagnostics and internal support teams.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="projects">
-    <div class="container">
-      <h2>Project Gallery</h2>
-      <p class="section-sub">Add real screenshots later by uploading your images and replacing the sample placeholders below.</p>
-      <div class="project-grid">
-        <div class="gallery-item">
-          <div class="gallery-shot">pfSense Dashboard Screenshot</div>
-          <div class="gallery-body">
-            <h3>Firewall Monitoring</h3>
-            <p>Dashboard visibility, WAN health, VPN overview, firewall events and service monitoring for client environments.</p>
-            <div class="tags"><span class="tag">pfSense</span><span class="tag">Monitoring</span><span class="tag">Security</span></div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <div class="gallery-shot">MikroTik Routing Screenshot</div>
-          <div class="gallery-body">
-            <h3>Routing & VLAN Design</h3>
-            <p>Secure routing between offices, CCTV, servers and client users with policy control and traffic isolation.</p>
-            <div class="tags"><span class="tag">MikroTik</span><span class="tag">Routing</span><span class="tag">WireGuard</span></div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <div class="gallery-shot">Remote Support Workflow</div>
-          <div class="gallery-body">
-            <h3>Remote Troubleshooting</h3>
-            <p>Fast diagnosis for remote access, NAT, blocked services, ISP failover and mobile connectivity issues.</p>
-            <div class="tags"><span class="tag">Support</span><span class="tag">VPN</span><span class="tag">Troubleshooting</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="testimonials">
-    <div class="container">
-      <h2>Client Testimonials</h2>
-      <p class="section-sub">These are sample testimonials for layout preview. Replace them with real client feedback anytime.</p>
-      <div class="testimonials">
-        <div class="testimonial">
-          <div class="quote">“</div>
-          <p>ZTBYTE helped stabilize our branch firewall and remote access in a very short time. Troubleshooting was clear, fast and professional.</p>
-          <div class="person">
-            <div class="avatar">AR</div>
-            <div><strong>Admin Office Client</strong><small>Firewall & VPN support</small></div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="quote">“</div>
-          <p>Our CCTV mobile access issue was resolved properly after routing and NAT were reviewed. Very helpful and easy to communicate with.</p>
-          <div class="person">
-            <div class="avatar">SM</div>
-            <div><strong>SME Business Client</strong><small>MikroTik & CCTV access</small></div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="quote">“</div>
-          <p>The support quality feels practical and hands-on. Good explanation, good technical depth, and the solution was easy for our team to maintain.</p>
-          <div class="person">
-            <div class="avatar">IT</div>
-            <div><strong>IT Operations Client</strong><small>Network optimization</small></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="connect">
-    <div class="container contact-grid">
-      <div class="contact-card">
-        <h2 style="text-align:left;margin-bottom:12px">Connect with ZTBYTE</h2>
-        <p>Use WhatsApp or Telegram for quick communication, and LinkedIn for company updates, project sharing and professional networking.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://www.linkedin.com/" target="_blank" rel="noopener">View LinkedIn</a>
-          <a class="btn btn-secondary" href="https://wa.me/6016397001" target="_blank" rel="noopener">WhatsApp Rusli</a>
-        </div>
-        <div class="telegram-box">
-          <div>
-            <strong>Live Telegram Support</strong>
-            <span class="small-note">Replace the link below with your Telegram username or bot link.</span>
-          </div>
-          <a class="btn btn-secondary" href="https://t.me/yourusername" target="_blank" rel="noopener">Open Telegram</a>
-        </div>
-        <p class="small-note" style="margin-top:18px">Tip: change <b>https://www.linkedin.com/</b> to your real LinkedIn profile, and change <b>https://t.me/yourusername</b> to your real Telegram link.</p>
-      </div>
-
-      <div class="contact-card" id="support">
-        <h2 style="text-align:left;margin-bottom:12px">Support Ticket Form</h2>
-        <p>This form is ready for GitHub Pages. For email delivery, static websites need a form service or backend. For now it opens the user's email app using your business email address.</p>
-        <form id="supportForm">
-          <input type="text" id="name" placeholder="Your Name" required>
-          <input type="email" id="email" placeholder="Email Address" required>
-          <input type="text" id="issue" placeholder="Issue Title" required>
-          <textarea id="details" rows="6" placeholder="Describe your issue" required></textarea>
-          <button class="btn btn-primary" type="submit">Send Ticket via Email</button>
-        </form>
-        <p class="small-note">Replace <b>support@ztbyte.com</b> in the code with your real support email. If later you want fully automatic submission, use Formspree, EmailJS or your own backend.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="floating-wrap">
-    <a class="float-btn tg-float" href="https://t.me/yourusername" target="_blank" rel="noopener" aria-label="Telegram">✈</a>
-    <a class="float-btn wa-float" href="https://wa.me/6016397001" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
-  </div>
-
-  <footer>
-    © 2026 ZTBYTE Technology • Built by Rusli • Your Network Solutions
-  </footer>
-
-  <script>
-    const form = document.getElementById('supportForm');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const issue = document.getElementById('issue').value.trim();
-      const details = document.getElementById('details').value.trim();
-      const to = 'support@ztbyte.com';
-      const subject = encodeURIComponent('[Support Ticket] ' + issue);
-      const body = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n\n' +
-        'Issue: ' + issue + '\n\n' +
-        'Details:\n' + details
-      );
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    });
-
-    const canvas = document.getElementById('particles');
-    const ctx = canvas.getContext('2d');
-    let w, h, particles;
-    function resize(){
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
-      particles = Array.from({length: Math.min(90, Math.floor(w / 18))}, () => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - .5) * .45,
-        vy: (Math.random() - .5) * .45,
-        r: Math.random() * 2.4 + .8
-      }));
-    }
-    function draw(){
-      ctx.clearRect(0,0,w,h);
-      for(let i=0;i<particles.length;i++){
-        const p = particles[i];
-        p.x += p.vx; p.y += p.vy;
-        if(p.x < 0 || p.x > w) p.vx *= -1;
-        if(p.y < 0 || p.y > h) p.vy *= -1;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(120,190,255,.75)';
-        ctx.fill();
-
-        for(let j=i+1;j<particles.length;j++){
-          const q = particles[j];
-          const dx = p.x - q.x;
-          const dy = p.y - q.y;
-          const d = Math.sqrt(dx*dx + dy*dy);
-          if(d < 120){
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = 'rgba(90,160,235,' + (1 - d / 120) * .22 + ')';
-            ctx.stroke();
-          }
-        }
-      }
-      requestAnimationFrame(draw);
-    }
-    window.addEventListener('resize', resize);
-    resize();
-    draw();
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZTBYTE Technology</title>
-  <style>
-    :root{
-      --bg:#081120;
-      --bg2:#0f172a;
-      --card:#111c31cc;
-      --line:#1e3359;
-      --text:#e5eefc;
-      --muted:#a8b7d1;
-      --brand:#1575bb;
-      --brand2:#4d9ad0;
-      --accent:#f7981c;
-      --success:#25D366;
-      --shadow:0 12px 40px rgba(0,0,0,.28);
-      --radius:22px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      color:var(--text);
-      background:linear-gradient(180deg,var(--bg),var(--bg2));
-      line-height:1.6;
-      overflow-x:hidden;
-    }
-    #particles{
-      position:fixed;
-      inset:0;
-      width:100%;
-      height:100%;
-      z-index:-1;
-      opacity:.55;
-    }
-    .container{max-width:1200px;margin:auto;padding:0 20px}
-    .section{padding:82px 0}
-    h1,h2,h3,p{margin-top:0}
-    h2{font-size:38px;text-align:center;margin-bottom:14px}
-    .section-sub{color:var(--muted);text-align:center;max-width:760px;margin:0 auto 34px}
-    .topbar{
-      position:sticky;top:0;z-index:20;
-      backdrop-filter:blur(14px);
-      background:rgba(6,12,24,.65);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
-    .brand-mini{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:1px}
-    .brand-mini img{width:42px;height:42px;object-fit:contain;border-radius:10px;background:#fff;padding:4px}
-    .nav-links{display:flex;gap:18px;flex-wrap:wrap}
-    .nav-links a{color:var(--text);text-decoration:none;font-size:14px;opacity:.9}
-    .nav-links a:hover{color:#fff}
-    .hero{padding:90px 0 68px;position:relative}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
-    .hero-card,.info-card,.card,.testimonial,.gallery-item,.contact-card{
-      background:var(--card);
-      border:1px solid rgba(255,255,255,.08);
+    .hero-logo-wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:420px;
+      background:rgba(255,255,255,.04);
       border-radius:var(--radius);
-      box-shadow:var(--shadow);
+      padding:30px;
     }
-    .hero-card{padding:38px}
-    .eyebrow{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(21,117,187,.15);border:1px solid rgba(77,154,208,.35);color:#c9e5ff;font-size:13px;margin-bottom:16px}
-    .hero h1{font-size:56px;line-height:1.05;margin-bottom:16px}
-    .hero p{font-size:18px;color:var(--muted);max-width:720px}
-    .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:12px;text-decoration:none;border:none;cursor:pointer;font-size:16px;font-weight:700;transition:.25s transform,.25s opacity,.25s background}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}
-    .btn-secondary{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.1)}
-    .hero-logo-wrap{padding:30px;display:flex;align-items:center;justify-content:center;min-height:420px}
     .hero-logo{
       width:min(100%,540px);
-      height:auto;
-      animation:fadeFloat 2s ease-out both, softPulse 6s ease-in-out infinite 2s;
+      animation:fadeFloat 2s ease-out both;
       filter:drop-shadow(0 16px 40px rgba(0,0,0,.35));
     }
     @keyframes fadeFloat{
-      from{opacity:0;transform:translateY(18px) scale(.96)}
-      to{opacity:1;transform:translateY(0) scale(1)}
+      from{opacity:0;transform:translateY(20px)}
+      to{opacity:1;transform:translateY(0)}
     }
-    @keyframes softPulse{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-6px)}
-    }
-    .mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
-    .info-card{padding:20px;text-align:center}
-    .info-card strong{display:block;font-size:24px;color:#fff}
-    .info-card span{font-size:13px;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-    .card{padding:24px}
-    .icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:16px;background:linear-gradient(135deg,rgba(21,117,187,.24),rgba(247,152,28,.2));border:1px solid rgba(255,255,255,.09)}
-    .card p,.testimonial p,.contact-card p{color:var(--muted)}
-    .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
-    .gallery-item{overflow:hidden}
-    .gallery-shot{height:220px;background:linear-gradient(135deg,#0d1b32,#163056);border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#d9e9ff;font-size:20px;font-weight:700;letter-spacing:.5px}
-    .gallery-shot img{width:100%;height:100%;object-fit:cover;display:block}
-    .gallery-body{padding:20px}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-    .tag{padding:6px 10px;border-radius:999px;font-size:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:#d6e6ff}
-    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-    .testimonial{padding:24px;position:relative}
-    .quote{font-size:40px;line-height:1;color:var(--accent);position:absolute;top:14px;right:18px;opacity:.45}
-    .person{display:flex;gap:14px;align-items:center;margin-top:18px}
-    .avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--brand2),var(--accent));display:grid;place-items:center;font-weight:700;color:#fff}
-    .person small{display:block;color:var(--muted)}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
-    .contact-card{padding:26px}
-    form{display:grid;gap:14px}
-    input,textarea{
-      width:100%;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#fff;font-size:15px
-    }
-    input::placeholder,textarea::placeholder{color:#97abc9}
-    .small-note{font-size:13px;color:var(--muted)}
-    .telegram-box{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);margin-top:18px}
-    .telegram-box strong{display:block}
-    .floating-wrap{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:25}
-    .float-btn{
-      width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;font-size:26px;box-shadow:0 12px 30px rgba(0,0,0,.28)
-    }
-    .wa-float{background:var(--success)}
-    .tg-float{background:#229ED9}
-    footer{text-align:center;padding:28px 20px;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
-    @media (max-width:960px){
-      .hero-grid,.contact-grid{grid-template-columns:1fr}
-      .hero h1{font-size:42px}
-      .hero-logo-wrap{min-height:auto}
-    }
-    @media (max-width:640px){
-      .nav{flex-direction:column;align-items:flex-start}
-      .mini-stats{grid-template-columns:1fr}
-      h2{font-size:30px}
-      .hero{padding-top:60px}
-      .hero h1{font-size:34px}
-      .hero-card{padding:24px}
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:14px 24px;
+      border-radius:12px;
+      text-decoration:none;
+      color:#fff;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
     }
   </style>
 </head>
@@ -537,11 +131,9 @@
         <span>ZTBYTE TECHNOLOGY</span>
       </div>
       <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#support">Support</a>
-        <a href="#connect">LinkedIn</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">Support</a>
       </div>
     </div>
   </div>
@@ -549,226 +141,51 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-card">
-        <span class="eyebrow">YOUR NETWORK SOLUTIONS</span>
-        <h1>Network, security and support that feel enterprise-ready.</h1>
-        <p>ZTBYTE Technology helps businesses strengthen pfSense, MikroTik, VPN, firewall, routing, remote access and cybersecurity operations with practical support and faster troubleshooting.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#support">Open Support Ticket</a>
-          <a class="btn btn-secondary" href="#projects">View Project Gallery</a>
-        </div>
-        <div class="mini-stats">
-          <div class="info-card"><strong>pfSense</strong><span>Firewall, VPN, IDS/IPS</span></div>
-          <div class="info-card"><strong>MikroTik</strong><span>Routing, VLAN, WireGuard</span></div>
-          <div class="info-card"><strong>Support</strong><span>Remote troubleshooting</span></div>
-        </div>
+        <h1>Network, Security and Enterprise Support</h1>
+        <p>ZTBYTE Technology helps businesses strengthen pfSense, MikroTik, VPN, firewall, routing and cybersecurity operations.</p>
+        <a class="btn" href="#">Open Support Ticket</a>
       </div>
-      <div class="hero-logo-wrap hero-card">
+
+      <div class="hero-logo-wrap">
         <img class="hero-logo" src="logo.png" alt="ZTBYTE Technology Logo">
       </div>
     </div>
   </section>
 
-  <section class="section" id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <p class="section-sub">Specialized infrastructure and cybersecurity support for SMB, office, CCTV and branch network environments.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="icon">🛡️</div>
-          <h3>pfSense Firewall</h3>
-          <p>Firewall policy hardening, VPN setup, HA deployment, pfBlockerNG tuning, NAT, site-to-site connectivity and log review.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🌐</div>
-          <h3>MikroTik Routing</h3>
-          <p>Routing design, inter-VLAN rules, CCTV access, failover, QoS, bandwidth control and WireGuard remote networking.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🔐</div>
-          <h3>Cybersecurity</h3>
-          <p>SOP hardening, incident response preparation, access review, segmentation and customer information protection guidance.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🤖</div>
-          <h3>Automation & AI Tools</h3>
-          <p>Custom scripts, Python utilities, Ollama support workflows and automation for network diagnostics and internal support teams.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="projects">
-    <div class="container">
-      <h2>Project Gallery</h2>
-      <p class="section-sub">Add real screenshots later by uploading your images and replacing the sample placeholders below.</p>
-      <div class="project-grid">
-        <div class="gallery-item">
-          <div class="gallery-shot">pfSense Dashboard Screenshot</div>
-          <div class="gallery-body">
-            <h3>Firewall Monitoring</h3>
-            <p>Dashboard visibility, WAN health, VPN overview, firewall events and service monitoring for client environments.</p>
-            <div class="tags"><span class="tag">pfSense</span><span class="tag">Monitoring</span><span class="tag">Security</span></div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <div class="gallery-shot">MikroTik Routing Screenshot</div>
-          <div class="gallery-body">
-            <h3>Routing & VLAN Design</h3>
-            <p>Secure routing between offices, CCTV, servers and client users with policy control and traffic isolation.</p>
-            <div class="tags"><span class="tag">MikroTik</span><span class="tag">Routing</span><span class="tag">WireGuard</span></div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <div class="gallery-shot">Remote Support Workflow</div>
-          <div class="gallery-body">
-            <h3>Remote Troubleshooting</h3>
-            <p>Fast diagnosis for remote access, NAT, blocked services, ISP failover and mobile connectivity issues.</p>
-            <div class="tags"><span class="tag">Support</span><span class="tag">VPN</span><span class="tag">Troubleshooting</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="testimonials">
-    <div class="container">
-      <h2>Client Testimonials</h2>
-      <p class="section-sub">These are sample testimonials for layout preview. Replace them with real client feedback anytime.</p>
-      <div class="testimonials">
-        <div class="testimonial">
-          <div class="quote">“</div>
-          <p>ZTBYTE helped stabilize our branch firewall and remote access in a very short time. Troubleshooting was clear, fast and professional.</p>
-          <div class="person">
-            <div class="avatar">AR</div>
-            <div><strong>Admin Office Client</strong><small>Firewall & VPN support</small></div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="quote">“</div>
-          <p>Our CCTV mobile access issue was resolved properly after routing and NAT were reviewed. Very helpful and easy to communicate with.</p>
-          <div class="person">
-            <div class="avatar">SM</div>
-            <div><strong>SME Business Client</strong><small>MikroTik & CCTV access</small></div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="quote">“</div>
-          <p>The support quality feels practical and hands-on. Good explanation, good technical depth, and the solution was easy for our team to maintain.</p>
-          <div class="person">
-            <div class="avatar">IT</div>
-            <div><strong>IT Operations Client</strong><small>Network optimization</small></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="connect">
-    <div class="container contact-grid">
-      <div class="contact-card">
-        <h2 style="text-align:left;margin-bottom:12px">Connect with ZTBYTE</h2>
-        <p>Use WhatsApp or Telegram for quick communication, and LinkedIn for company updates, project sharing and professional networking.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://www.linkedin.com/" target="_blank" rel="noopener">View LinkedIn</a>
-          <a class="btn btn-secondary" href="https://wa.me/6016397001" target="_blank" rel="noopener">WhatsApp Rusli</a>
-        </div>
-        <div class="telegram-box">
-          <div>
-            <strong>Live Telegram Support</strong>
-            <span class="small-note">Replace the link below with your Telegram username or bot link.</span>
-          </div>
-          <a class="btn btn-secondary" href="https://t.me/yourusername" target="_blank" rel="noopener">Open Telegram</a>
-        </div>
-        <p class="small-note" style="margin-top:18px">Tip: change <b>https://www.linkedin.com/</b> to your real LinkedIn profile, and change <b>https://t.me/yourusername</b> to your real Telegram link.</p>
-      </div>
-
-      <div class="contact-card" id="support">
-        <h2 style="text-align:left;margin-bottom:12px">Support Ticket Form</h2>
-        <p>This form is ready for GitHub Pages. For email delivery, static websites need a form service or backend. For now it opens the user's email app using your business email address.</p>
-        <form id="supportForm">
-          <input type="text" id="name" placeholder="Your Name" required>
-          <input type="email" id="email" placeholder="Email Address" required>
-          <input type="text" id="issue" placeholder="Issue Title" required>
-          <textarea id="details" rows="6" placeholder="Describe your issue" required></textarea>
-          <button class="btn btn-primary" type="submit">Send Ticket via Email</button>
-        </form>
-        <p class="small-note">Replace <b>support@ztbyte.com</b> in the code with your real support email. If later you want fully automatic submission, use Formspree, EmailJS or your own backend.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="floating-wrap">
-    <a class="float-btn tg-float" href="https://t.me/yourusername" target="_blank" rel="noopener" aria-label="Telegram">✈</a>
-    <a class="float-btn wa-float" href="https://wa.me/6016397001" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
-  </div>
-
-  <footer>
-    © 2026 ZTBYTE Technology • Built by Rusli • Your Network Solutions
-  </footer>
-
   <script>
-    const form = document.getElementById('supportForm');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const issue = document.getElementById('issue').value.trim();
-      const details = document.getElementById('details').value.trim();
-      const to = 'support@ztbyte.com';
-      const subject = encodeURIComponent('[Support Ticket] ' + issue);
-      const body = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n\n' +
-        'Issue: ' + issue + '\n\n' +
-        'Details:\n' + details
-      );
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    });
-
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
-    let w, h, particles;
+    let w,h,particles;
+
     function resize(){
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
-      particles = Array.from({length: Math.min(90, Math.floor(w / 18))}, () => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - .5) * .45,
-        vy: (Math.random() - .5) * .45,
-        r: Math.random() * 2.4 + .8
+      w=canvas.width=window.innerWidth;
+      h=canvas.height=window.innerHeight;
+      particles=Array.from({length:80},()=>({
+        x:Math.random()*w,
+        y:Math.random()*h,
+        vx:(Math.random()-.5)*.5,
+        vy:(Math.random()-.5)*.5,
+        r:Math.random()*2+1
       }));
     }
+
     function draw(){
       ctx.clearRect(0,0,w,h);
-      for(let i=0;i<particles.length;i++){
-        const p = particles[i];
-        p.x += p.vx; p.y += p.vy;
-        if(p.x < 0 || p.x > w) p.vx *= -1;
-        if(p.y < 0 || p.y > h) p.vy *= -1;
+      particles.forEach(p=>{
+        p.x+=p.vx;
+        p.y+=p.vy;
+        if(p.x<0||p.x>w)p.vx*=-1;
+        if(p.y<0||p.y>h)p.vy*=-1;
 
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(120,190,255,.75)';
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle='rgba(120,190,255,.7)';
         ctx.fill();
-
-        for(let j=i+1;j<particles.length;j++){
-          const q = particles[j];
-          const dx = p.x - q.x;
-          const dy = p.y - q.y;
-          const d = Math.sqrt(dx*dx + dy*dy);
-          if(d < 120){
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = 'rgba(90,160,235,' + (1 - d / 120) * .22 + ')';
-            ctx.stroke();
-          }
-        }
-      }
+      });
       requestAnimationFrame(draw);
     }
-    window.addEventListener('resize', resize);
+
+    window.addEventListener('resize',resize);
     resize();
     draw();
   </script>
