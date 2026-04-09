@@ -71,7 +71,7 @@
       backdrop-filter:blur(14px);
       background:rgba(6,12,24,.85);
       border-bottom:1px solid rgba(255,255,255,.06);
-      transition:transform 0.3s;
+      transition:transform .3s;
     }
     
     .topbar.hidden{transform:translateY(-100%)}
@@ -102,7 +102,7 @@
       background:rgba(255,255,255,.92);
       padding:4px;
       box-shadow:0 4px 14px rgba(0,0,0,.18);
-      transition:transform 0.3s;
+      transition:transform .3s;
     }
     
     .brand-mini:hover img{transform:scale(1.05)}
@@ -121,7 +121,7 @@
       opacity:.9;
       position:relative;
       padding:4px 0;
-      transition:color 0.2s;
+      transition:color .2s;
     }
     
     .nav-links a::after{
@@ -132,12 +132,11 @@
       width:0;
       height:2px;
       background:var(--brand2);
-      transition:width 0.3s;
+      transition:width .3s;
     }
     
     .nav-links a:hover{color:#fff}
     .nav-links a:hover::after{width:100%}
-    
     .nav-links a.active{color:var(--brand2)}
     
     /* Hero Section */
@@ -170,7 +169,7 @@
       font-size:13px;
       margin-bottom:16px;
       font-weight:600;
-      letter-spacing:0.5px;
+      letter-spacing:.5px;
     }
     
     .hero h1{
@@ -205,7 +204,7 @@
       cursor:pointer;
       font-size:16px;
       font-weight:700;
-      transition:all 0.25s;
+      transition:all .25s;
       position:relative;
       overflow:hidden;
     }
@@ -246,7 +245,7 @@
       position:absolute;
       inset:0;
       background:radial-gradient(circle at center,rgba(21,117,187,.1),transparent 70%);
-      opacity:0.5;
+      opacity:.5;
     }
     
     .hero-logo{
@@ -265,7 +264,6 @@
       from{opacity:0;transform:translateY(18px) scale(.96)}
       to{opacity:1;transform:translateY(0) scale(1)}
     }
-    
     @keyframes softPulse{
       0%,100%{transform:translateY(0)}
       50%{transform:translateY(-6px)}
@@ -281,7 +279,7 @@
     .info-card{
       padding:20px;
       text-align:center;
-      transition:transform 0.3s,border-color 0.3s;
+      transition:transform .3s,border-color .3s;
     }
     
     .info-card:hover{
@@ -307,7 +305,7 @@
     
     .card{
       padding:28px;
-      transition:transform 0.3s,border-color 0.3s;
+      transition:transform .3s,border-color .3s;
     }
     
     .card:hover{
@@ -339,7 +337,7 @@
     
     .gallery-item{
       overflow:hidden;
-      transition:transform 0.3s;
+      transition:transform .3s;
     }
     
     .gallery-item:hover{transform:translateY(-6px)}
@@ -371,7 +369,7 @@
       height:100%;
       object-fit:cover;
       display:block;
-      transition:transform 0.5s;
+      transition:transform .5s;
     }
     
     .gallery-item:hover .gallery-shot img{transform:scale(1.05)}
@@ -397,192 +395,192 @@
     }
     
     /* PRODUCTS SECTION */
-    .product-showcase {
-      display: flex;
-      flex-direction: column;
-      gap: 50px;
+    .product-showcase{
+      display:flex;
+      flex-direction:column;
+      gap:50px;
     }
     
-    .product-category {
-      padding: 32px;
-      border-radius: var(--radius);
+    .product-category{
+      padding:32px;
+      border-radius:var(--radius);
     }
     
-    .category-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-      gap: 16px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,.06);
+    .category-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:28px;
+      flex-wrap:wrap;
+      gap:16px;
+      padding-bottom:20px;
+      border-bottom:1px solid rgba(255,255,255,.06);
     }
     
     .brand-logo-pfsense,
-    .brand-logo-mikrotik {
-      display: flex;
-      flex-direction: column;
+    .brand-logo-mikrotik{
+      display:flex;
+      flex-direction:column;
     }
     
     .brand-logo-pfsense span,
-    .brand-logo-mikrotik span {
-      font-size: 26px;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: -0.5px;
+    .brand-logo-mikrotik span{
+      font-size:26px;
+      font-weight:800;
+      color:#fff;
+      letter-spacing:-.5px;
     }
     
-    .brand-logo-pfsense small {
-      color: #f7981c;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .brand-logo-pfsense small{
+      color:#f7981c;
+      font-size:12px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:1px;
     }
     
-    .brand-logo-mikrotik small {
-      color: var(--brand2);
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .brand-logo-mikrotik small{
+      color:var(--brand2);
+      font-size:12px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:1px;
     }
     
-    .hardware-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+    .hardware-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
     }
     
-    .hardware-card {
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: inherit;
-      position: relative;
-      transition: all 0.3s;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
+    .hardware-card{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;
+      padding:24px;
+      text-decoration:none;
+      color:inherit;
+      position:relative;
+      transition:all .3s;
+      display:flex;
+      flex-direction:column;
+      height:100%;
     }
     
-    .hardware-card:hover {
-      transform: translateY(-6px);
-      background: rgba(255,255,255,.08);
-      border-color: rgba(255,255,255,.15);
-      box-shadow: 0 20px 40px rgba(0,0,0,.3);
+    .hardware-card:hover{
+      transform:translateY(-6px);
+      background:rgba(255,255,255,.08);
+      border-color:rgba(255,255,255,.15);
+      box-shadow:0 20px 40px rgba(0,0,0,.3);
     }
     
-    .hardware-badge {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      color: #fff;
-      font-size: 10px;
-      font-weight: 700;
-      padding: 5px 10px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    .hardware-badge{
+      position:absolute;
+      top:16px;
+      right:16px;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff;
+      font-size:10px;
+      font-weight:700;
+      padding:5px 10px;
+      border-radius:20px;
+      text-transform:uppercase;
+      letter-spacing:.5px;
     }
     
-    .hardware-icon {
-      font-size: 32px;
-      margin-bottom: 12px;
+    .hardware-icon{
+      font-size:32px;
+      margin-bottom:12px;
     }
     
-    .hardware-card h4 {
-      font-size: 18px;
-      margin-bottom: 14px;
-      color: #fff;
+    .hardware-card h4{
+      font-size:18px;
+      margin-bottom:14px;
+      color:#fff;
     }
     
-    .specs {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 16px 0;
-      flex-grow: 1;
+    .specs{
+      list-style:none;
+      padding:0;
+      margin:0 0 16px 0;
+      flex-grow:1;
     }
     
-    .specs li {
-      padding: 5px 0;
-      color: var(--muted);
-      font-size: 13px;
-      border-bottom: 1px solid rgba(255,255,255,.04);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .specs li{
+      padding:5px 0;
+      color:var(--muted);
+      font-size:13px;
+      border-bottom:1px solid rgba(255,255,255,.04);
+      display:flex;
+      align-items:center;
+      gap:8px;
     }
     
-    .specs li:before {
-      content: "✓";
-      color: var(--brand2);
-      font-weight: bold;
-      font-size: 11px;
+    .specs li:before{
+      content:"✓";
+      color:var(--brand2);
+      font-weight:bold;
+      font-size:11px;
     }
     
-    .buy-link {
-      color: var(--brand2);
-      font-weight: 600;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: gap 0.3s;
+    .buy-link{
+      color:var(--brand2);
+      font-weight:600;
+      font-size:14px;
+      display:flex;
+      align-items:center;
+      gap:6px;
+      transition:gap .3s;
     }
     
-    .hardware-card:hover .buy-link {
-      gap: 10px;
-      color: #fff;
+    .hardware-card:hover .buy-link{
+      gap:10px;
+      color:#fff;
     }
     
-    .btn-sm {
-      padding: 8px 16px;
-      font-size: 13px;
+    .btn-sm{
+      padding:8px 16px;
+      font-size:13px;
     }
     
-    .product-note {
-      margin-top: 40px;
-      background: rgba(21,117,187,.15);
-      border: 1px solid rgba(77,154,208,.3);
-      border-radius: 16px;
-      padding: 20px;
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
+    .product-note{
+      margin-top:40px;
+      background:rgba(21,117,187,.15);
+      border:1px solid rgba(77,154,208,.3);
+      border-radius:16px;
+      padding:20px;
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
     }
     
-    .note-icon {
-      font-size: 24px;
-      flex-shrink: 0;
+    .note-icon{
+      font-size:24px;
+      flex-shrink:0;
     }
     
-    .product-note strong {
-      color: #fff;
-      display: block;
-      margin-bottom: 4px;
+    .product-note strong{
+      color:#fff;
+      display:block;
+      margin-bottom:4px;
     }
     
-    .product-note p {
-      color: var(--muted);
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.6;
+    .product-note p{
+      color:var(--muted);
+      margin:0;
+      font-size:14px;
+      line-height:1.6;
     }
     
-    .product-note a {
-      color: var(--brand2);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s;
+    .product-note a{
+      color:var(--brand2);
+      text-decoration:none;
+      border-bottom:1px solid transparent;
+      transition:border-color .3s;
     }
     
-    .product-note a:hover {
-      border-bottom-color: var(--brand2);
+    .product-note a:hover{
+      border-bottom-color:var(--brand2);
     }
     
     /* Testimonials */
@@ -595,7 +593,7 @@
     .testimonial{
       padding:28px;
       position:relative;
-      transition:transform 0.3s;
+      transition:transform .3s;
     }
     
     .testimonial:hover{transform:translateY(-4px)}
@@ -657,7 +655,7 @@
       color:#fff;
       font-size:15px;
       font-family:inherit;
-      transition:border-color 0.3s,background 0.3s;
+      transition:border-color .3s,background .3s;
       outline:none;
     }
     
@@ -728,7 +726,7 @@
       color:#fff;
       font-size:24px;
       box-shadow:0 8px 20px rgba(0,0,0,.3);
-      transition:transform 0.3s,box-shadow 0.3s;
+      transition:transform .3s,box-shadow .3s;
       position:relative;
     }
     
@@ -748,7 +746,7 @@
       white-space:nowrap;
       opacity:0;
       pointer-events:none;
-      transition:opacity 0.3s;
+      transition:opacity .3s;
     }
     
     .float-btn:hover::after{opacity:1}
@@ -798,14 +796,14 @@
     }
     
     .footer-logos .logo-track img{
-      height:48px;               /* ubah nilai ini untuk menukar saiz logo */
+      height:48px;
       margin:0 24px;
       filter:brightness(0) invert(1);
     }
     
     @keyframes scrollLogos{
       0%   { transform:translateX(0); }
-      100% { transform:translateX(-50%); }  /* gerak set pertama */
+      100% { transform:translateX(-50%); }
     }
     
     @media (max-width:640px){
@@ -816,7 +814,6 @@
     }
     /* ----------  END CAROUSEL  ---------- */
     
-    /* Back to Top */
     .back-to-top{
       position:fixed;
       bottom:20px;
@@ -833,7 +830,7 @@
       cursor:pointer;
       opacity:0;
       pointer-events:none;
-      transition:all 0.3s;
+      transition:all .3s;
       z-index:20;
       font-size:20px;
     }
@@ -904,62 +901,83 @@
     <div class="container hero-grid">
       <div class="hero-card">
         <span class="eyebrow">YOUR NETWORK SOLUTIONS</span>
-        <h1>Network, security and support that feel enterprise-ready.</h1>
+        <h1>Network, security and support that feel enterprise‑ready.</h1>
         <p>ZTBYTE Technology helps businesses strengthen pfSense, MikroTik, VPN, firewall, routing, remote access and cybersecurity operations with practical support and faster troubleshooting.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#support">Open Support Ticket</a>
           <a class="btn btn-secondary" href="#projects">View Project Gallery</a>
         </div>
         <div class="mini-stats">
-          <div class="info-card">
-            <strong>pfSense</strong>
-            <span>Firewall, VPN, IDS/IPS</span>
-          </div>
-          <div class="info-card">
-            <strong>MikroTik</strong>
-            <span>Routing, VLAN, WireGuard</span>
-          </div>
-          <div class="info-card">
-            <strong>24/7</strong>
-            <span>Remote Support</span>
-          </div>
+          <div class="info-card"><strong>pfSense</strong><span>Firewall, VPN, IDS/IPS</span></div>
+          <div class="info-card"><strong>MikroTik</strong><span>Routing, VLAN, WireGuard</span></div>
+          <div class="info-card"><strong>24/7</strong><span>Remote Support</span></div>
         </div>
       </div>
-      
       <div class="hero-logo-wrap hero-card">
         <img class="hero-logo" src="logo.png" alt="ZTBYTE Technology Logo" loading="eager">
       </div>
     </div>
   </section>
 
+  <!-- --------------------------------------------------- -->
+  <!--   SECTION: OUR SERVICES (UPDATED)                -->
+  <!-- --------------------------------------------------- -->
   <section class="section" id="services">
     <div class="container">
       <h2>Our Services</h2>
-      <p class="section-sub">Specialized infrastructure and cybersecurity support for SMB, office, CCTV and branch network environments.</p>
-      
+      <p class="section-sub">
+        Specialized infrastructure and cybersecurity support for SMB, office, CCTV and branch network environments.
+      </p>
+
       <div class="grid">
+        <!-- Existing services -->
         <div class="card">
           <div class="icon" aria-hidden="true">🛡️</div>
           <h3>pfSense Firewall</h3>
-          <p>Firewall policy hardening, VPN setup, HA deployment, pfBlockerNG tuning, NAT, site-to-site connectivity and log review.</p>
+          <p>Firewall policy hardening, VPN setup, HA deployment, pfBlockerNG tuning, NAT, site‑to‑site connectivity and log review.</p>
         </div>
-        
+
         <div class="card">
           <div class="icon" aria-hidden="true">🌐</div>
           <h3>MikroTik Routing</h3>
-          <p>Routing design, inter-VLAN rules, CCTV access, failover, QoS, bandwidth control and WireGuard remote networking.</p>
+          <p>Routing design, inter‑VLAN rules, CCTV access, failover, QoS, bandwidth control and WireGuard remote networking.</p>
         </div>
-        
+
         <div class="card">
           <div class="icon" aria-hidden="true">🔐</div>
           <h3>Cybersecurity</h3>
           <p>SOP hardening, incident response preparation, access review, segmentation and customer information protection guidance.</p>
         </div>
-        
+
         <div class="card">
           <div class="icon" aria-hidden="true">🤖</div>
           <h3>Automation & AI Tools</h3>
           <p>Custom scripts, Python utilities, Ollama support workflows and automation for network diagnostics and internal support teams.</p>
+        </div>
+
+        <!-- New services -->
+        <div class="card">
+          <div class="icon" aria-hidden="true">🏫</div>
+          <h3>School Network Design</h3>
+          <p>Design & implementation of campus LAN/WAN, VLAN segmentation, managed Wi‑Fi, and safe internet filtering for educational institutions (primary‑to‑university).</p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">🏢</div>
+          <h3>Office Networking</h3>
+          <p>End‑to‑end networking for small‑to‑large offices: structured cabling, PoE switches, enterprise Wi‑Fi, VPN remote‑access, and unified communications.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">⚡</div>
+          <h3>Fiber‑Optic Installation</h3>
+          <p>FTTx, GPON or single‑mode fiber deployments, splice‑and‑test services, fiber patch panels and high‑speed back‑bone integration.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">🔗</div>
+          <h3>Point‑to‑Point Links</h3>
+          <p>Wireless or fiber point‑to‑point links for branch offices, remote sites, or temporary event networks with low latency and high reliability.</p>
         </div>
       </div>
     </div>
@@ -968,7 +986,7 @@
   <section class="section" id="projects">
     <div class="container">
       <h2>Project Gallery</h2>
-      <p class="section-sub">Real-world implementations of network infrastructure, security hardening, and remote access solutions.</p>
+      <p class="section-sub">Real‑world implementations of network infrastructure, security hardening, and remote access solutions.</p>
       
       <div class="project-grid">
         <div class="gallery-item">
@@ -977,7 +995,7 @@
           </div>
           <div class="gallery-body">
             <h3>Enterprise Firewall Deployment</h3>
-            <p>Multi-WAN pfSense setup with failover, VPN concentrator, and intrusion detection for 200+ users.</p>
+            <p>Multi‑WAN pfSense setup with failover, VPN concentrator, and intrusion detection for 200+ users.</p>
             <div class="tags">
               <span class="tag">pfSense</span>
               <span class="tag">HA</span>
@@ -992,7 +1010,7 @@
           </div>
           <div class="gallery-body">
             <h3>Branch Office Network</h3>
-            <p>VLAN segmentation, WireGuard site-to-site VPN, and bandwidth management for 5 branch locations.</p>
+            <p>VLAN segmentation, WireGuard site‑to‑site VPN, and bandwidth management for 5 branch locations.</p>
             <div class="tags">
               <span class="tag">MikroTik</span>
               <span class="tag">WireGuard</span>
@@ -1007,7 +1025,7 @@
           </div>
           <div class="gallery-body">
             <h3>Security Hardening</h3>
-            <p>Complete network audit, firewall rule optimization, and CCTV network isolation for manufacturing facility.</p>
+            <p>Complete network audit, firewall rule optimization, and CCTV network isolation for a manufacturing facility.</p>
             <div class="tags">
               <span class="tag">Audit</span>
               <span class="tag">CCTV</span>
@@ -1050,7 +1068,6 @@
               </ul>
               <div class="buy-link">View Specs →</div>
             </a>
-            
             <a href="https://www.netgate.com/products/xg-6100.html" target="_blank" rel="noopener" class="hardware-card">
               <div class="hardware-badge">Enterprise</div>
               <div class="hardware-icon">🏢</div>
@@ -1064,7 +1081,6 @@
               </ul>
               <div class="buy-link">View Specs →</div>
             </a>
-            
             <a href="https://www.netgate.com/products/xg-8200.html" target="_blank" rel="noopener" class="hardware-card">
               <div class="hardware-badge">High‑End</div>
               <div class="hardware-icon">🚀</div>
@@ -1105,7 +1121,6 @@
               </ul>
               <div class="buy-link">View Specs →</div>
             </a>
-            
             <a href="https://mikrotik.com/product/ccr2004-16g-2splus" target="_blank" rel="noopener" class="hardware-card">
               <div class="hardware-badge">Data Centre</div>
               <div class="hardware-icon">🖥️</div>
@@ -1119,7 +1134,6 @@
               </ul>
               <div class="buy-link">View Specs →</div>
             </a>
-            
             <a href="https://mikrotik.com/product/crs326-24g-2srm" target="_blank" rel="noopener" class="hardware-card">
               <div class="hardware-badge">Switch</div>
               <div class="hardware-icon">🔄</div>
@@ -1140,8 +1154,8 @@
       <div class="product-note">
         <div class="note-icon">ℹ️</div>
         <div>
-          <strong>Need consultation on hardware selection?</strong>
-          <p>We help you choose the right appliance based on your bandwidth, user count, and feature requirements. <a href="#quotation">Request a free consultation</a> or WhatsApp us for instant advice.</p>
+          <strong>Need a hardware selection consultation?</strong>
+          <p>We’ll help you choose the right appliance based on bandwidth, user count, and required features. <a href="#quotation">Request a free consultation</a> or WhatsApp us for instant advice.</p>
         </div>
       </div>
     </div>
@@ -1164,7 +1178,6 @@
             </div>
           </div>
         </div>
-        
         <div class="testimonial">
           <div class="quote" aria-hidden="true">“</div>
           <p>Our CCTV mobile access issue was resolved properly after routing and NAT were reviewed. Very helpful and easy to communicate with.</p>
@@ -1176,7 +1189,6 @@
             </div>
           </div>
         </div>
-        
         <div class="testimonial">
           <div class="quote" aria-hidden="true">“</div>
           <p>The support quality feels practical and hands‑on. Good explanation, good technical depth, and the solution was easy for our team to maintain.</p>
@@ -1209,6 +1221,10 @@
             <option value="Networking">Networking</option>
             <option value="Cybersecurity">Cybersecurity</option>
             <option value="Automation">Automation & AI</option>
+            <option value="School Network">School Network</option>
+            <option value="Office Networking">Office Networking</option>
+            <option value="Fiber‑Optic Installation">Fiber‑Optic Installation</option>
+            <option value="Point‑to‑Point Links">Point‑to‑Point Links</option>
           </select>
           
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
@@ -1250,14 +1266,14 @@
         
         <div class="telegram-box">
           <div>
-            <strong>Live Telegram Support Operate by ZTbyteBoT</strong>
+            <strong>Live Telegram Support Operated by ZTbyteBot</strong>
             <span class="small-note">Fastest response for urgent network issues</span>
           </div>
           <a class="btn btn-secondary" href="https://t.me/ZTbyteBoT" target="_blank" rel="noopener">Open Telegram</a>
         </div>
         
         <p class="small-note" style="margin-top:18px">
-          <strong>Business Hours:</strong> Mon‑Fri 9:00 AM - 6:00 PM (MYT)<br>
+          <strong>Business Hours:</strong> Mon‑Fri 9:00 AM – 6:00 PM (MYT)<br>
           Emergency support available via WhatsApp/Telegram
         </p>
       </div>
@@ -1276,8 +1292,8 @@
           
           <select id="priority" style="margin-bottom:8px">
             <option value="Normal">Normal Priority</option>
-            <option value="High">High Priority - Business Impact</option>
-            <option value="Critical">Critical - System Down</option>
+            <option value="High">High Priority – Business Impact</option>
+            <option value="Critical">Critical – System Down</option>
           </select>
           
           <textarea id="details" rows="5" placeholder="Describe your issue in detail...
@@ -1296,7 +1312,7 @@ Include:
             <span>Ticket prepared! Opening your email client...</span>
           </div>
           
-          <p class="small-note">This will open your default email client. If that doesn't work, email us directly at <a href="mailto:ztbyte.technology@gmail.com" style="color:var(--brand2)">ztbyte.technology@gmail.com"</a></p>
+          <p class="small-note">This will open your default email client. If that doesn't work, email us directly at <a href="mailto:ztbyte.technology@gmail.com" style="color:var(--brand2)">ztbyte.technology@gmail.com</a></p>
         </form>
       </div>
     </div>
@@ -1317,12 +1333,12 @@ Include:
       <!-- ==== AUTO‑SLIDE LOGO CAROUSEL ==== -->
       <div class="footer-logos">
         <div class="logo-track">
-          <!-- 1️⃣ set pertama -->
+          <!-- first set -->
           <img src="img/pfsense.svg"      alt="pfSense"      loading="lazy">
           <img src="img/mikrotik.svg"     alt="MikroTik"    loading="lazy">
           <img src="img/ubiquiti.svg"    alt="Ubiquiti"    loading="lazy">
           <img src="img/wireguard.svg"    alt="WireGuard"   loading="lazy">
-          <!-- 2️⃣ set kedua (duplikasi – supaya gelombang tak putus) -->
+          <!-- duplicated set (to keep the loop seamless) -->
           <img src="img/pfsense.svg"      alt="pfSense"      loading="lazy">
           <img src="img/mikrotik.svg"     alt="MikroTik"    loading="lazy">
           <img src="img/ubiquiti.svg"    alt="Ubiquiti"    loading="lazy">
@@ -1330,12 +1346,13 @@ Include:
         </div>
       </div>
       <!-- ==== END CAROUSEL ==== -->
-
     </div>
   </footer>
 
   <script>
-    // Particle Animation with IntersectionObserver for performance
+    // -------------------------------------------------------
+    // Particle animation (kept exactly as from original)
+    // -------------------------------------------------------
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
     let w, h, particles, animationId;
@@ -1385,9 +1402,9 @@ Include:
       animationId = requestAnimationFrame(draw);
     }
     
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
       isVisible = entries[0].isIntersecting;
-      if(isVisible && !animationId) draw();
+      if (isVisible && !animationId) draw();
     });
     observer.observe(canvas);
     
@@ -1399,9 +1416,11 @@ Include:
     resize();
     draw();
     
-    // Quotation Form Handler
+    // -------------------------------------------------------
+    // Quotation Form
+    // -------------------------------------------------------
     const qform = document.getElementById('quotationForm');
-    qform.addEventListener('submit', function(e){
+    qform.addEventListener('submit', e => {
       e.preventDefault();
       const name = document.getElementById('qname').value.trim();
       const email = document.getElementById('qemail').value.trim();
@@ -1427,9 +1446,11 @@ Include:
       }, 800);
     });
     
-    // Support Form Handler
-    const form = document.getElementById('supportForm');
-    form.addEventListener('submit', function(e){
+    // -------------------------------------------------------
+    // Support Form
+    // -------------------------------------------------------
+    const sform = document.getElementById('supportForm');
+    sform.addEventListener('submit', e => {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
@@ -1453,50 +1474,44 @@ Include:
       }, 800);
     });
     
-    // Scroll spy for navigation
+    // -------------------------------------------------------
+    // Scroll spy + Back‑to‑top + hide navbar on scroll down
+    // -------------------------------------------------------
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
     
     function onScroll(){
-      const backToTop = document.getElementById('backToTop');
-      if(window.scrollY > 500){
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
+      const backBtn = document.getElementById('backToTop');
+      backBtn.classList.toggle('visible', window.scrollY > 500);
       
       let current = '';
       sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if(scrollY >= (sectionTop - 100)){
-          current = section.getAttribute('id');
+        if(window.scrollY >= section.offsetTop - 100){
+          current = section.id;
         }
       });
+      
       navLinks.forEach(link => {
-        link.classList.remove('active');
-        if(link.getAttribute('href') === `#${current}`){
-          link.classList.add('active');
-        }
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
       });
     }
     window.addEventListener('scroll', onScroll);
     
-    // Back to top functionality
     document.getElementById('backToTop').addEventListener('click', () => {
-      window.scrollTo({top: 0, behavior: 'smooth'});
+      window.scrollTo({top:0, behavior:'smooth'});
     });
     
-    // Hide/show navbar on scroll direction
+    // Hide/show topbar when scrolling down/up
     let lastScroll = 0;
-    const navbar = document.getElementById('navbar');
+    const topbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      if(currentScroll > lastScroll && currentScroll > 100){
-        navbar.classList.add('hidden');
+      const cur = window.pageYOffset;
+      if (cur > lastScroll && cur > 100){
+        topbar.classList.add('hidden');
       } else {
-        navbar.classList.remove('hidden');
+        topbar.classList.remove('hidden');
       }
-      lastScroll = currentScroll;
+      lastScroll = cur;
     });
   </script>
 </body>
