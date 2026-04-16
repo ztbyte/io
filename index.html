@@ -814,6 +814,45 @@
     }
     /* ----------  END CAROUSEL  ---------- */
     
+    /* ----------  AUTO‑SLIDE “WORK” SECTION (below gallery) ---------- */
+    .work-slider{
+      margin:36px 0;
+      overflow:hidden;
+      background:rgba(255,255,255,.02);
+      border-top:1px solid rgba(255,255,255,.06);
+      padding:12px 0;
+    }
+    
+    .work-slider .slide-track{
+      display:flex;
+      width:max-content;
+      animation:scrollWork var(--slide-duration,28s) linear infinite;
+    }
+    
+    .work-slider .slide-track img{
+      height:180px;                 /* tinggi gambar – sesuaikan bila perlu */
+      margin:0 24px;
+      object-fit:cover;
+      border-radius:8px;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);
+    }
+    
+    .work-slider .slide-track:hover{
+      animation-play-state:paused;
+    }
+    
+    @keyframes scrollWork{
+      0%   { transform:translateX(0); }
+      100% { transform:translateX(-50%); }
+    }
+    
+    @media (max-width:640px){
+      .work-slider .slide-track img{
+        height:130px;
+        margin:0 16px;
+      }
+    }
+    
     .back-to-top{
       position:fixed;
       bottom:20px;
@@ -1034,6 +1073,43 @@
           </div>
         </div>
       </div>
+
+      <!-- ==================== AUTO‑SLIDE “WORK” ==================== -->
+      <div class="work-slider">
+        <div class="slide-track">
+          <!-- ====== SET 1 (gambar kerja) ====== -->
+          <!-- Ganti src dengan gambar kerja Anda (jpg/png/webp, dsb). Pastikan urutan di set‑2 sama persis untuk loop mulus -->
+          <img src="img/kerja1.png" alt="Kerja 1" loading="lazy">
+          <img src="img/kerja2.jpg" alt="Kerja 2" loading="lazy">
+          <img src="img/kerja3.jpg" alt="Kerja 3" loading="lazy">
+          <img src="img/kerja4.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja5.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja6.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja7.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja8.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja9.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja10.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja11.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja12.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja13.jpg" alt="Kerja 4" loading="lazy">
+          <!-- ====== SET 2 (duplikat) ====== -->
+          <img src="img/kerja1.jpg" alt="Kerja 1" loading="lazy">
+          <img src="img/kerja2.jpg" alt="Kerja 2" loading="lazy">
+          <img src="img/kerja3.jpg" alt="Kerja 3" loading="lazy">
+          <img src="img/kerja4.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja5.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja6.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja7.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja8.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja9.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja10.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja11.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja12.jpg" alt="Kerja 4" loading="lazy">
+		  <img src="img/kerja13.jpg" alt="Kerja 4" loading="lazy">
+    </div>
+      </div>
+      <!-- ==================== END AUTO‑SLIDE ==================== -->
+
     </div>
   </section>
 
