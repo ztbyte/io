@@ -781,10 +781,10 @@ Include:
       const to      = 'ztbyte.technology@gmail.com';
       const mailSub = encodeURIComponent(`[Contact] ${subject} - ${name}`);
       const mailBod = encodeURIComponent(
-        `Name: ${name}%0D%0A` +
-        `Email: ${email}%0D%0A` +
-        `Subject: ${subject}%0D%0A%0D%0A` +
-        `Message:%0D%0A${message}`
+        `Name: ${name}` +
+        `Email: ${email}` +
+        `Subject: ${subject}` +
+        `Message:{message}`
       );
 
       document.getElementById('contactSuccess').classList.add('show');
